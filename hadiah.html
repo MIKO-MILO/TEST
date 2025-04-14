@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hadiah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-green-100 px-4">
+  <div class="text-center">
+    <h1 class="text-3xl font-bold text-green-700" id="judul">Selamat!</h1>
+    <p class="mt-4 text-lg text-gray-800" id="pesan"></p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nama = params.get('nama') || 'Anda';
+    document.getElementById("pesan").textContent =
+      `Selamat ${nama}, kamu mendapatkan Rp5000 dari Si A. Silakan diambil jika bertemu.`;
+  </script>
+</body>
+</html>
